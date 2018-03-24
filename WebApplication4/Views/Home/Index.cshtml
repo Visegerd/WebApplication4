@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<environment include="Development">
+    <script src="~/js/loader.js"></script>
+    <script src="~/js/stl.js"></script>
+</environment>
+
+<div id="view">
+</div>
+@using (Html.BeginForm("Upload", "Upload", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+<div id="uploader">Przeciągnij plik tutaj...</div>
+<div id="select-file">
+    <input type="submit" name="Submit" id="Submit" value="Upload" />
+    <!-- Wybierz plik:</br> -->
+    <!-- <input type="file" id="file" /></br> -->
+    <!-- ...lub przeciągnij plik stl do obszaru widoku -->
+    <!-- </div> -->
+</div>
+}
+
+
+
+
+
+
+@*<div class="row">
+    @using (Html.BeginForm("Upload", "Upload", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <input type="file" name="uploader" id="uploader" />
+        <input type="submit" name="Submit" id="Submit" value="Upload" />
+    }
+</div>*@
+
